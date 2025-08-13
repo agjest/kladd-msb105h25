@@ -1,0 +1,63 @@
+---
+title: "Mitt første Quarto Dokument"
+author: "Arnstein"
+format: html
+editor: visual
+echo: false
+---
+
+```{r}
+#| label: startup
+#| message: false
+#| warning: false
+#| echo: false
+library(tidyverse)
+```
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document.
+To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code.
+You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+
+```{r}
+#| eval: false
+#| echo: true
+2 + "a"
+```
+
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+#| echo: true
+plot(cars, xlab = "Speed (mph)", ylab = "Stopping distance (ft)",
+     las = 0)
+```
+
+```{r}
+cars |> 
+  ggplot(
+    mapping = aes(x = speed, y = dist)  
+  ) +
+  geom_point() +
+  geom_smooth()
+```
+

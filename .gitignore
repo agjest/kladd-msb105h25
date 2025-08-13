@@ -1,3 +1,8 @@
+# my edits
+*.pdf
+*.html
+.gitignore
+
 # History files
 .Rhistory
 .Rapp.history
